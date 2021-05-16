@@ -59,7 +59,7 @@ class BH1750:
         gpio.i2c_write_byte(self.i2c_handle, data)
     
     # Read the given amount of data from the device
-    def _read_data(self, count):
+    def _read_data(self, count=1):
         if count == 1:
             return gpio.i2c_read_byte(self.i2c_handle)
         else:
